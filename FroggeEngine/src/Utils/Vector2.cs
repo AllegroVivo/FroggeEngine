@@ -74,6 +74,11 @@ public class Vector2
     {
         return new Vector2(a.X + (b.X - a.X) * t, a.Y + (b.Y - a.Y) * t);
     }
+    
+    public Vector2 Lerp(Vector2 target, Single t)
+    {
+        return Lerp(this, target, t);
+    }
 
     public Vector2 Rotate(Single angle)
     {

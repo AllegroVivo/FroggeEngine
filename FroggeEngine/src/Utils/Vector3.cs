@@ -77,4 +77,40 @@ public class Vector3
     {
         return new Vector3(a.X + (b.X - a.X) * t, a.Y + (b.Y - a.Y) * t, a.Z + (b.Z - a.Z) * t);
     }
+    
+    public Vector3 Lerp(Vector3 other, Single t)
+    {
+        return Lerp(this, other, t);
+    }
+    
+    public Vector3 Copy()
+    {
+        return new Vector3(X, Y, Z);
+    }
+    
+    public Boolean ArrivedAt(Vector3 target)
+    {
+        return Distance(target) < EPSILON;
+    }
+    
+    public static Vector3 Zero => new(0, 0, 0);
+    public static Vector3 One => new(1, 1, 1);
+    public static Vector3 Up => new(0, 1, 0);
+    public static Vector3 Down => new(0, -1, 0);
+    public static Vector3 Left => new(-1, 0, 0);
+    public static Vector3 Right => new(1, 0, 0);
+    public static Vector3 Forward => new(0, 0, 1);
+    public static Vector3 Backward => new(0, 0, -1);
+    
+    public static Vector3 operator +(Vector3 a, Vector3 b) => new(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+    public static Vector3 operator -(Vector3 a, Vector3 b) => new(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+    public static Vector3 operator -(Vector3 a) => new(-a.X, -a.Y, -a.Z);
+    public static Vector3 operator *(Vector3 a, Vector3 b) => new(a.X * b.X, a.Y * b.Y, a.Z * b.Z);
+    public static Vector3 operator *(Vector3 a, Single b) => new(a.X * b, a.Y * b, a.Z * b);
+    public static Vector3 operator *(Single a, Vector3 b) => new(a * b.X, a * b.Y, a * b.Z);
+    public static Vector3 operator /(Vector3 a, Vector3 b) => new(a.X / b.X, a.Y / b.Y, a.Z / b.Z);
+    public static Vector3 operator /(Vector3 a, Single b) => new(a.X / b, a.Y / b, a.Z / b);
+    public static Vector3 operator /(Single a, Vector3 b) => new(a / b.X, a / b.Y, a / b.Z);
+    public static Boolean operator ==(Vector3 a, Vector3 b) => a.X == b.X && a.Y == b.Y && a.Z == b.Z;
+    public static Boolean operator !=(Vector3 a, Vector3 b) => a.X != b.X || a.Y != b.Y || a.Z != b.Z;
 }
