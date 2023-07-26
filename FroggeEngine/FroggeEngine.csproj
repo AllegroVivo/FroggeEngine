@@ -70,17 +70,16 @@
         <Compile Include="src\Engine\Events.cs" />
         <Compile Include="src\Engine\Game.cs" />
         <Compile Include="src\Engine\Logger.cs" />
-        <Compile Include="src\Engine\RenderingSystem.cs" />
         <Compile Include="src\Entities\Component.cs" />
         <Compile Include="src\Entities\GameObject.cs" />
         <Compile Include="src\Graphics\Color.cs" />
-        <Compile Include="src\Graphics\Renderer.cs" />
         <Compile Include="src\Graphics\Surface.cs" />
         <Compile Include="src\Input\Keyboard.cs" />
         <Compile Include="src\Input\Keys.cs" />
         <Compile Include="src\Input\Mouse.cs" />
         <Compile Include="src\Physics\PhysicsEngine.cs" />
         <Compile Include="src\Program.cs" />
+        <Compile Include="src\Systems\RenderingSystem.cs" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="assets\images\" />
@@ -95,11 +94,11 @@
       <Folder Include="obj\Debug\net7.0\ref\" />
       <Folder Include="src\Assets\" />
       <Folder Include="src\Audio\" />
+      <Folder Include="src\Components\" />
       <Folder Include="src\Utils\" />
       <Folder Include="tests\" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="OrderOfExecution.png" />
       <Content Include="obj\Debug\FroggeEngine.csproj.AssemblyReference.cache" />
       <Content Include="obj\Debug\net7.0-windows\FroggeEngine.AssemblyInfoInputs.cache" />
       <Content Include="obj\Debug\net7.0-windows\FroggeEngine.assets.cache" />
@@ -116,7 +115,7 @@
       <Content Include="obj\project.nuget.cache" />
       <Content Include="obj\project.packagespec.json" />
       <Content Include="obj\rider.project.restore.info" />
-      <Content Include="README.md" />
+      <Content Include="OrderOfExecution.png" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />

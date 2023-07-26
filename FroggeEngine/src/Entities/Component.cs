@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frogge.Objects;
+namespace Frogge.Entities;
 
 public abstract class Component
 {

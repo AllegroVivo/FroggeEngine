@@ -1,7 +1,7 @@
 ﻿using System;
 using SDL2;
 
-namespace Frogge.Engine;
+namespace Frogge.Systems;
 
 public class RenderingSystem
 {
