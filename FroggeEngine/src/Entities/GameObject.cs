@@ -4,68 +4,43 @@ using System.Drawing;
 
 namespace Frogge.Entities;
 
-public abstract class GameObject
+public abstract class GameObject : FObject
 {
-    private Dictionary<Type, Component> _components = new();
+    private Dictionary<Type, FComponent> _components;
 
-    // Position of the object
-    public Single X { get; set; }
-    public Single Y { get; set; }
-        
-    // Size of the object
-    public Single Width { get; set; }
-    public Single Height { get; set; }
-        
-    // Velocity of the object
-    public Single VelX { get; set; }
-    public Single VelY { get; set; }
-        
-    // Constructor
-    public GameObject(Single x, Single y, Single width, Single height)
+    protected GameObject(String name)
+        : base(name)
     {
-        X = x;
-        Y = y;
-        Width = width;
-        Height = height;
+        _components = new Dictionary<Type, FComponent<>>();
     }
-        
-    // Update method, to be overridden by child classes
-    public virtual void Update(Single deltaTime)
-    {
-        // By default, for now, just move the object according to its velocity
-        X += VelX * deltaTime;
-        Y += VelY * deltaTime;
-    }
-        
-    // Render method, to be overridden by child classes
-    public abstract void Render(System.Drawing.Graphics graphics);
 
-    public void AddComponent(Component component)
+    public T AddComponent<T>() where T : FComponent<T>, new()
     {
-        Type type = component.GetType();
-            
-        if (_components.ContainsKey(type))
+        Type componentType = typeof(T);
+        if (!_components.ContainsKey(componentType))
         {
-            throw new Exception($"Component of type {type} already exists on this GameObject");
+            T component = new();
+            component._SetGameObject(this);
+            _components.Add(componentType, component);
+            return component;
         }
 
-        _components[type] = component;
-        component.Initialize();
+        throw new Exception($"Component of type {componentType} already exists on this GameObject");
     }
         
-    public T? GetComponent<T>() where T : Component
+    public T? GetComponent<T>() where T : FComponent<>
     {
         Type type = typeof(T);
-        if (_components.TryGetValue(type, out Component? component))
+        if (_components.TryGetValue(type, out FComponent<>? component))
             return (T)component;
 
         return null;
     }
         
-    public void RemoveComponent<T>() where T : Component
+    public void RemoveComponent<T>() where T : FComponent<>
     {
         Type type = typeof(T);
-        if (_components.TryGetValue(type, out Component? component))
+        if (_components.TryGetValue(type, out FComponent<>? component))
         {
             component.Finalize();
             _components.Remove(type);

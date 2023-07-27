@@ -73,8 +73,10 @@
         <Compile Include="src\Engine\Logger.cs" />
         <Compile Include="src\Engine\Math.cs" />
         <Compile Include="src\Engine\StateStack.cs" />
-        <Compile Include="src\Entities\Component.cs" />
-        <Compile Include="src\Entities\Components\PhysicsComponent.cs" />
+        <Compile Include="src\Entities\FComponent.cs" />
+        <Compile Include="src\Entities\Components\RigidBody.cs" />
+        <Compile Include="src\Entities\Components\Transform.cs" />
+        <Compile Include="src\Entities\FObject.cs" />
         <Compile Include="src\Entities\GameObject.cs" />
         <Compile Include="src\Graphics\Color.cs" />
         <Compile Include="src\Input\Keyboard.cs" />

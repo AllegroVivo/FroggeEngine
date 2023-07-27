@@ -1,12 +1,13 @@
 ﻿using System;
 using Frogge.Entities.Components;
-using Frogge.Systems;
 
-public class PhysicsSystem : GameSystem<PhysicsComponent>
+namespace Frogge.Systems;
+
+public class PhysicsSystem : GameSystem<RigidBody>
 {
     public override void Update(Single deltaTime)
     {
-        foreach (PhysicsComponent component in _components)
+        foreach (RigidBody component in _components)
         {
             // Update component's position based on its velocity
             component.Position += component.Velocity * deltaTime;

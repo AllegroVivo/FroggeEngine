@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frogge.Graphics;
+namespace Frogge.Graphical;
 
 public struct Color
 {
