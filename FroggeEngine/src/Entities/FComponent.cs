@@ -2,15 +2,7 @@
 
 namespace Frogge.Entities;
 
-public abstract class FComponent : FObject
-{
-    protected FComponent(String name)
-    : base(name)
-    {
-    }
-}
-
-public abstract class FComponent<T> : FComponent where T : FComponent<T>, new()
+public abstract class FComponent<T> : FObject where T : FComponent<T>, new()
 {
     private GameObject? _gameObject;
     public GameObject GameObject
