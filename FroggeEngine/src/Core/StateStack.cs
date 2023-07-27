@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Frogge.Engine;
+namespace Frogge.Core;
 
 public class StateStack
 {

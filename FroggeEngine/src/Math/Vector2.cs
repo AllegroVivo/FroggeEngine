@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frogge;
+namespace Frogge.Math;
 
 public class Vector2
 {
@@ -29,7 +29,7 @@ public class Vector2
 
     public Vector2 Round(Int32 digits = 0)
     {
-        return new Vector2((Single)Math.Round(X, digits), (Single)Math.Round(Y, digits));
+        return new Vector2((Single)System.Math.Round(X, digits), (Single)System.Math.Round(Y, digits));
     }
 
     public Vector2 FloorDiv(Int32 divisor)
@@ -49,7 +49,7 @@ public class Vector2
     
     public Single Magnitude()
     {
-        return (Single)Math.Sqrt(X * X + Y * Y);
+        return (Single)System.Math.Sqrt(X * X + Y * Y);
     }
     
     public Single SqrMagnitude()
@@ -67,7 +67,7 @@ public class Vector2
     {
         Single dx = target.X - X;
         Single dy = target.Y - Y;
-        return (Single)Math.Sqrt(dx * dx + dy * dy);
+        return (Single)System.Math.Sqrt(dx * dx + dy * dy);
     }
     
     public static Vector2 Lerp(Vector2 a, Vector2 b, Single t)
@@ -82,22 +82,22 @@ public class Vector2
 
     public Vector2 Rotate(Single angle)
     {
-        Single radians = angle * (Single)Math.PI / 180f;
+        Single radians = angle * (Single)System.Math.PI / 180f;
         return RotateRadians(radians);
     }
 
     public Vector2 RotateRadians(Single radians)
     {
-        Single cos = (Single)Math.Cos(radians);
-        Single sin = (Single)Math.Sin(radians);
+        Single cos = (Single)System.Math.Cos(radians);
+        Single sin = (Single)System.Math.Sin(radians);
         
         // Snap to exact values if close. Damn floating point math.
-        if (Math.Abs(cos) < EPSILON) cos = 0;
-        if (Math.Abs(sin) < EPSILON) sin = 0;
-        if (Math.Abs(cos - 1) < EPSILON) cos = 1;
-        if (Math.Abs(sin - 1) < EPSILON) sin = 1;
-        if (Math.Abs(cos + 1) < EPSILON) cos = -1;
-        if (Math.Abs(sin + 1) < EPSILON) sin = -1;
+        if (System.Math.Abs(cos) < EPSILON) cos = 0;
+        if (System.Math.Abs(sin) < EPSILON) sin = 0;
+        if (System.Math.Abs(cos - 1) < EPSILON) cos = 1;
+        if (System.Math.Abs(sin - 1) < EPSILON) sin = 1;
+        if (System.Math.Abs(cos + 1) < EPSILON) cos = -1;
+        if (System.Math.Abs(sin + 1) < EPSILON) sin = -1;
         
         return new Vector2(X * cos - Y * sin, X * sin + Y * cos);
     }

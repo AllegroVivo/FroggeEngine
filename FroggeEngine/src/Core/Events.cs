@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frogge.Engine;
+namespace Frogge.Core;
 
 public class EventSystem
 {

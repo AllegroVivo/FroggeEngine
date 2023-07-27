@@ -5,8 +5,8 @@ namespace Frogge.Systems;
 
 public class RenderingSystem
 {
-    private IntPtr _window;
-    private IntPtr _renderer;
+    private readonly IntPtr _window;
+    private readonly IntPtr _renderer;
 
     public RenderingSystem(String title, Int32 windowWidth, Int32 windowHeight)
     {

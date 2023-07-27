@@ -64,15 +64,16 @@
         <Compile Include="SDL2-CS\SDL2_image.cs" />
         <Compile Include="SDL2-CS\SDL2_mixer.cs" />
         <Compile Include="SDL2-CS\SDL2_ttf.cs" />
-        <Compile Include="src\Engine\Clock.cs" />
-        <Compile Include="src\Engine\Display.cs" />
-        <Compile Include="src\Engine\Engine.cs" />
-        <Compile Include="src\Engine\Events.cs" />
-        <Compile Include="src\Engine\Game.cs" />
-        <Compile Include="src\Engine\GameState.cs" />
-        <Compile Include="src\Engine\Logger.cs" />
-        <Compile Include="src\Engine\Math.cs" />
-        <Compile Include="src\Engine\StateStack.cs" />
+        <Compile Include="src\Core\Time.cs" />
+        <Compile Include="src\Core\Engine.cs" />
+        <Compile Include="src\Core\Events.cs" />
+        <Compile Include="src\Core\Font.cs" />
+        <Compile Include="src\Core\Game.cs" />
+        <Compile Include="src\Core\GameState.cs" />
+        <Compile Include="src\Core\Image.cs" />
+        <Compile Include="src\Core\Logger.cs" />
+        <Compile Include="src\Core\Mixer.cs" />
+        <Compile Include="src\Core\StateStack.cs" />
         <Compile Include="src\Entities\FComponent.cs" />
         <Compile Include="src\Entities\Components\Transform.cs" />
         <Compile Include="src\Entities\FObject.cs" />
@@ -81,12 +82,13 @@
         <Compile Include="src\Input\Keyboard.cs" />
         <Compile Include="src\Input\Keys.cs" />
         <Compile Include="src\Input\Mouse.cs" />
+        <Compile Include="src\Math\Mathf.cs" />
+        <Compile Include="src\Math\Vector2.cs" />
+        <Compile Include="src\Math\Vector3.cs" />
         <Compile Include="src\Physics\PhysicsEngine.cs" />
         <Compile Include="src\Program.cs" />
         <Compile Include="src\Systems\GameSystem.cs" />
         <Compile Include="src\Systems\RenderingSystem.cs" />
-        <Compile Include="src\Utils\Vector2.cs" />
-        <Compile Include="src\Utils\Vector3.cs" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="assets\images\" />
@@ -101,6 +103,7 @@
       <Folder Include="obj\Debug\net7.0\ref\" />
       <Folder Include="src\Assets\" />
       <Folder Include="src\Audio\" />
+      <Folder Include="src\Utils\" />
       <Folder Include="tests\" />
     </ItemGroup>
     <ItemGroup>

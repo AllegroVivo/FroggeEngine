@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frogge;
+namespace Frogge.Math;
 
 public class Vector3
 {
@@ -31,7 +31,7 @@ public class Vector3
     
     public Vector3 Round(Int32 digits = 0)
     {
-        return new Vector3((Single)Math.Round(X, digits), (Single)Math.Round(Y, digits), (Single)Math.Round(Z, digits));
+        return new Vector3((Single)System.Math.Round(X, digits), (Single)System.Math.Round(Y, digits), (Single)System.Math.Round(Z, digits));
     }
     
     public Vector3 FloorDiv(Int32 divisor)
@@ -51,7 +51,7 @@ public class Vector3
     
     public Single Magnitude()
     {
-        return (Single)Math.Sqrt(X * X + Y * Y + Z * Z);
+        return (Single)System.Math.Sqrt(X * X + Y * Y + Z * Z);
     }
     
     public Single SqrMagnitude()
@@ -70,7 +70,7 @@ public class Vector3
         Single dx = X - other.X;
         Single dy = Y - other.Y;
         Single dz = Z - other.Z;
-        return (Single)Math.Sqrt(dx * dx + dy * dy + dz * dz);
+        return (Single)System.Math.Sqrt(dx * dx + dy * dy + dz * dz);
     }
     
     public static Vector3 Lerp(Vector3 a, Vector3 b, Single t)
@@ -112,7 +112,7 @@ public class Vector3
     public static Vector3 operator /(Vector3 a, Single b) => new(a.X / b, a.Y / b, a.Z / b);
     public static Vector3 operator /(Single a, Vector3 b) => new(a / b.X, a / b.Y, a / b.Z);
     public static Boolean operator ==(Vector3 a, Vector3 b) => 
-        Math.Abs(a.X - b.X) < EPSILON && Math.Abs(a.Y - b.Y) < EPSILON && Math.Abs(a.Z - b.Z) < EPSILON;
+        System.Math.Abs(a.X - b.X) < EPSILON && System.Math.Abs(a.Y - b.Y) < EPSILON && System.Math.Abs(a.Z - b.Z) < EPSILON;
     public static Boolean operator !=(Vector3 a, Vector3 b) => !(a == b);
 
 }

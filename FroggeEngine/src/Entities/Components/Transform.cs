@@ -1,6 +1,8 @@
 using System;
 
-namespace Frogge.Entities.Componenets;
+using Frogge.Math;
+
+namespace Frogge.Entities.Components;
 
 public class Transform : FComponent<Transform>
 {

@@ -2,20 +2,20 @@
 
 using Frogge.Systems;
 
-namespace Frogge.Engine;
+namespace Frogge.Core;
 
 public class Game
 {
     private Boolean _isRunning = true;
     
-    private Clock _clock;
-    private Logger _logger;
-    private EventSystem _eventSystem;
-    private RenderingSystem _renderer;
+    private readonly Time _clock;
+    private readonly Logger _logger;
+    private readonly EventSystem _eventSystem;
+    private readonly RenderingSystem _renderer;
 
     public Game()
     {
-        _clock = new Clock();
+        _clock = new Time();
         _logger = new Logger();
         _eventSystem = new EventSystem();
         _renderer = new RenderingSystem("Frogge Engine", 800, 600);
