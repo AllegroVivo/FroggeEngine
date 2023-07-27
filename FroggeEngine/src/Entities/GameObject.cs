@@ -11,7 +11,7 @@ public abstract class GameObject : FObject
     protected GameObject(String name)
         : base(name)
     {
-        _components = new Dictionary<Type, FComponent<>>();
+        _components = new Dictionary<Type, FComponent>();
     }
 
     public T AddComponent<T>() where T : FComponent<T>, new()
@@ -28,19 +28,19 @@ public abstract class GameObject : FObject
         throw new Exception($"Component of type {componentType} already exists on this GameObject");
     }
         
-    public T? GetComponent<T>() where T : FComponent<>
+    public T? GetComponent<T>() where T : FComponent
     {
         Type type = typeof(T);
-        if (_components.TryGetValue(type, out FComponent<>? component))
+        if (_components.TryGetValue(type, out FComponent? component))
             return (T)component;
 
         return null;
     }
         
-    public void RemoveComponent<T>() where T : FComponent<>
+    public void RemoveComponent<T>() where T : FComponent
     {
         Type type = typeof(T);
-        if (_components.TryGetValue(type, out FComponent<>? component))
+        if (_components.TryGetValue(type, out FComponent? component))
         {
             component.Finalize();
             _components.Remove(type);

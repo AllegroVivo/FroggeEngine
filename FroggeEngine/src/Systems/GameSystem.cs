@@ -5,7 +5,7 @@ using Frogge.Entities;
 
 namespace Frogge.Systems;
 
-public abstract class GameSystem<T> where T : FComponent<>
+public abstract class GameSystem<T> where T : FComponent
 {
     protected List<T> _components;
     

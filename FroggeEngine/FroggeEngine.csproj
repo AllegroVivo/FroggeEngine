@@ -74,7 +74,6 @@
         <Compile Include="src\Engine\Math.cs" />
         <Compile Include="src\Engine\StateStack.cs" />
         <Compile Include="src\Entities\FComponent.cs" />
-        <Compile Include="src\Entities\Components\RigidBody.cs" />
         <Compile Include="src\Entities\Components\Transform.cs" />
         <Compile Include="src\Entities\FObject.cs" />
         <Compile Include="src\Entities\GameObject.cs" />
@@ -85,7 +84,6 @@
         <Compile Include="src\Physics\PhysicsEngine.cs" />
         <Compile Include="src\Program.cs" />
         <Compile Include="src\Systems\GameSystem.cs" />
-        <Compile Include="src\Systems\PhysicsSystem.cs" />
         <Compile Include="src\Systems\RenderingSystem.cs" />
         <Compile Include="src\Utils\Vector2.cs" />
         <Compile Include="src\Utils\Vector3.cs" />

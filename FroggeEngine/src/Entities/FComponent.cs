@@ -2,7 +2,7 @@
 
 namespace Frogge.Entities;
 
-public abstract class FComponent<T> : FObject where T : FComponent<T>, new()
+public abstract class FComponent : FObject
 {
     private GameObject? _gameObject;
     public GameObject GameObject
@@ -15,12 +15,13 @@ public abstract class FComponent<T> : FObject where T : FComponent<T>, new()
             return _gameObject;
         }
     }
-
-    protected FComponent()
-    : base(typeof(T).Name)
+    
+    protected FComponent(String name)
+    : base(name)
     {
     }
-
+    
+    
     public void _SetGameObject(GameObject gameObject)
     {
         if (_gameObject == null)
@@ -29,4 +30,13 @@ public abstract class FComponent<T> : FObject where T : FComponent<T>, new()
     
     // Optionally, might have some other methods here - just examples.
     public virtual void Update(Single deltaTime) { }
+    public virtual void Finalize() { }
+}
+
+public abstract class FComponent<T> : FComponent where T : FComponent<T>, new()
+{
+    protected FComponent()
+    : base(typeof(T).Name)
+    {
+    }
 }
