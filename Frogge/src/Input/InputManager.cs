@@ -1,4 +1,5 @@
 using System;
+using OpenTK;
 
 namespace Frogge.Input;
 
@@ -16,4 +17,6 @@ public class InputManager
     {
         throw new NotImplementedException();
     }
+    
+    private Dictionary<Keys, Key>
 }
