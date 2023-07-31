@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q4KtPLPsCSQD4pdCZw/6rLkSqBXLb5mZeorC6TNoaHeTTTKgW545jEChVL9GBTRwVL2/0F/OnisgkZeJvW2jjQ==",
+  "success": true,
+  "projectFilePath": "C:\\CSharp\\FroggeEngine\\Frogge\\Frogge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alleg\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk\\5.0.0-pre.8\\opentk.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.compute\\5.0.0-pre.8\\opentk.compute.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.core\\5.0.0-pre.8\\opentk.core.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.graphics\\5.0.0-pre.8\\opentk.graphics.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.input\\5.0.0-pre.8\\opentk.input.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.mathematics\\5.0.0-pre.8\\opentk.mathematics.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.openal\\5.0.0-pre.8\\opentk.openal.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.redist.glfw\\3.3.8.30\\opentk.redist.glfw.3.3.8.30.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.windowing.common\\5.0.0-pre.8\\opentk.windowing.common.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.windowing.desktop\\5.0.0-pre.8\\opentk.windowing.desktop.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\opentk.windowing.graphicslibraryframework\\5.0.0-pre.8\\opentk.windowing.graphicslibraryframework.5.0.0-pre.8.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alleg\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>FrogEngine</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="assets\images\" />
+      <Folder Include="assets\scripts\" />
+      <Folder Include="assets\sounds\" />
+      <Folder Include="docs\" />
+      <Folder Include="lib\" />
+      <Folder Include="src\Assets\" />
+      <Folder Include="src\Audio\" />
+      <Folder Include="src\Utils\" />
+      <Folder Include="tests\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="log4net" Version="2.0.15" />
+      <PackageReference Include="OpenTK" Version="5.0.0-pre.8" />
+    </ItemGroup>
+
+</Project>
